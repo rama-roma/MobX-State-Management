@@ -1,61 +1,55 @@
-# React + Vite
+# MobX State Management (Sync & Async)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small educational project built with React + MobX using Vite.
+The goal is to clearly demonstrate the difference between synchronous and asynchronous state management.
 
-Currently, two official plugins are available:
+Simple structure, clean logic, zero overengineering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Tech Stack
 
-## React Compiler
+React
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+MobX
 
-## Expanding the ESLint configuration
+Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+JavaScript (ES6+)
+
+JSON Server (for async data)
 
 
-  async addUser(formdata) {
-    try {
-      await fetch(`${this.API}`, {
-        method: "POST",
-        body: formdata,
-      });
-      this.getData()
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  async addImsge(formdata, id) {
-    try {
-      await fetch(`https://to-dos-api.softclub.tj/api/to-dos/${id}/images`, {
-        method: "POST",
-        body: formdata,
-      });
-      this.getData()
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  async deleteImage(id) {
-    try {
-      await fetch(`${this.API}/images/${id}`, {
-        method: "DELETE",
-      });
-      this.getData();
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  async statusData(id) {
-    try {
-      await fetch(`https://to-dos-api.softclub.tj/completed?id=${id}`, {
-        method: "PUT",
-      });
-      this.getData();
-    } catch (error) {
-      console.error(error);
-    }
-  }
-# mobX
+📂 Project Structure
+src/
+├─ pages/
+│  ├─ home.jsx        # Main page
+│  ├─ sync.jsx        # Sync state example
+│  ├─ async.jsx       # Async state example
+│  ├─ infoSync.jsx   # Sync explanation page
+│  └─ infoAsync.jsx  # Async explanation page
+│
+├─ store/
+│  ├─ todo.js        # Single todo store
+│  └─ todos.js       # Todos collection store
+│
+├─ App.jsx
+├─ layout.jsx
+├─ main.jsx
+└─ index.css
+
+
+✨ Features
+🔹 Sync State
+
+Instant state updates
+
+No API calls
+
+Pure MobX reactivity
+
+🔹 Async State
+
+Fetching data from mock API
+
+Async actions
+
+Loading & data flow handling
