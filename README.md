@@ -1,24 +1,25 @@
 # MobX State Management (Sync & Async)
 
-A small educational project built with React + MobX using Vite.
-The goal is to clearly demonstrate the difference between synchronous and asynchronous state management.
+A small educational project built with **React + MobX** using **Vite**.  
+The goal is to clearly demonstrate the difference between **synchronous** and **asynchronous** state management.
 
 Simple structure, clean logic, zero overengineering.
 
-🚀 Tech Stack
+---
 
-React
+## 🚀 Tech Stack
 
-MobX
+- React
+- MobX
+- Vite
+- JavaScript (ES6+)
+- JSON Server (for async data)
 
-Vite
+---
 
-JavaScript (ES6+)
+## 📂 Project Structure
 
-JSON Server (for async data)
-
-
-📂 Project Structure
+```text
 src/
 ├─ pages/
 │  ├─ home.jsx        # Main page
